@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions'
-// import { fetchUser } from '../actions/index';
+ import { fetchUser } from '../actions/index';
 
 import Header from './Header';
 import Landing from './Landing';
@@ -31,8 +31,8 @@ class App extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => ({
-//   fetchUser: () => dispatch(fetchUser()),
-// });
+const mapDispatchToProps = dispatch => ({
+  fetchUser: () => dispatch(fetchUser()),
+});
 
  export default connect(null, actions)(App);
